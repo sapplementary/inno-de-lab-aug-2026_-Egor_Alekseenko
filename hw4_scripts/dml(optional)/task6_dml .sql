@@ -15,7 +15,7 @@ FROM
 WHERE
   e.firstname = 'Bob'
   AND e.lastname = 'Johnson'
-  AND e2.hoursworked >= 150
+  AND e2.hoursworked > 150;
 
 /*
  * 2 action
@@ -30,8 +30,8 @@ WHERE EXISTS (
     JOIN employees e
         ON ep.employeeid = e.employeeid
     WHERE ep.projectid = p.projectid
-      AND e.department = 'Senior IT'
-)
+      AND e.department = 'IT'
+);
 
 /*
  * 3 action
@@ -41,7 +41,7 @@ NULL), установить EndDate на один год позже его Start
 
 UPDATE projects
 SET enddate = (startdate + INTERVAL '1 year')::date
-WHERE enddate IS NULL
+WHERE enddate IS NULL;
 
 /*
  * 4 action

@@ -32,7 +32,7 @@ SELECT
   e.salary,
   CalculateAnnualBonus (e.employeeid, e.salary) AS bonus
 FROM
-  employees e
+  employees e;
   
   /*
   3 action
@@ -41,19 +41,21 @@ IT_Department_View, которое показывает EmployeeID,
 FirstName, LastName и Salary только для сотрудников из отдела
 'IT'.
    */
-CREATE OR REPLACE VIEW IT_Department_View as
-select EmployeeID,
+CREATE OR REPLACE VIEW IT_Department_View AS
+SELECT EmployeeID,
 	FirstName,
 	LastName,
 	Salary
-from employees у
-where department = 'Senior IT'
+FROM employees e
+WHERE department = 'IT';
 
 /*
  * 4 action
  * Выбрать данные из вашего представления IT_Department_View
 */
-SELECT * FROM IT_Department_View
+SELECT * FROM IT_Department_View;
+
+
 
 
 

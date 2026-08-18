@@ -7,7 +7,7 @@ UPDATE employees e
 SET
   salary = salary * 1.1
 WHERE
-  e.department = 'HR'
+  e.department = 'HR';
 
   
   /*
@@ -15,21 +15,14 @@ WHERE
   * Обновить Department любого сотрудника с Salary выше 70000.00
   на 'Senior IT'.
   */
-UPDATE employees e
+UPDATE
+	employees
 SET
-  Department = 'Senior IT'
+	department = 'Senior IT'
 WHERE
-  e.employeeid IN (
-    SELECT
-      e.employeeid
-    FROM
-      Employees
-    WHERE
-      e.salary > 70000.00
-    LIMIT
-      1
-  );
+	salary > 70000.00;
 
+  
 
 /*
 3 action
@@ -45,7 +38,7 @@ WHERE
     FROM
       employeeprojects e2
     WHERE
-      e.employeeid = e.employeeid
+      e2.employeeid = e.employeeid
   );
 
 
