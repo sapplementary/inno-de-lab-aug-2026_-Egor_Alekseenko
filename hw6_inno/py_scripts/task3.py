@@ -3,8 +3,8 @@ task 3
 Напишите программу, которая запрашивает у пользователя температуру в градусах Цельсия,
 переводит её в градусы Фаренгейта и выводит результат на экран.
 """
-temp_celsius = int(input(f'Введите температуру в градусах Цельсия: '))
+temp_celsius = int(input('Введите температуру в градусах Цельсия: '))
 
 conversion = ((temp_celsius * 9) / 5) + 32
 
-print(f'{temp_celsius}°C  это {conversion}℉')
+print(f'{temp_celsius}°C это {conversion}℉')
